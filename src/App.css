@@ -175,7 +175,7 @@ a{
     margin-top: 2rem;
   }
   
-  .login-fields input[type="text"],
+  input[type="text"],
   input[type="email"],
   input[type="password"] {
     display: block;
@@ -246,7 +246,7 @@ a{
   }
 
 .errorAlert {
-  color: #ffffff;
+  color: var(--primary-background-color);
   background-color: #f8d7da7a;
   border: 2px solid #ff5768;
   border-radius: 5px;
@@ -682,4 +682,19 @@ a{
   line-height: 25px;
   font-size: 18px;
 }
+
+.postError{
+  margin-top: 5px;
+  background-color: #ac0011;
+  padding: 10px;
+  color: #fff;
+}
+
+.successMessage{
+  margin-top: 5px;
+  background-color: #00b65b;
+  padding: 10px;
+  color: #fff;
+}
+
 /* https://www.youtube.com/watch?v=FLt2TveqHQM */
