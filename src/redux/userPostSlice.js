@@ -6,7 +6,7 @@ export const getMyBooks = createAsyncThunk(
         const signedInUser = localStorage.getItem('signedInuser')
         const userToken = JSON.parse(signedInUser)
         const { token } = userToken
-        const response = await fetch('/api/v1/mylibrary/user/mybooks',{
+        const response = await fetch('https://bookshareserver.herokuapp.com/api/v1/mylibrary/user/mybooks',{
             method: "GET",
             headers : {
                 Authorization: `Bearer ${token}`
@@ -26,7 +26,7 @@ export const addBook = createAsyncThunk(
         const signedInUser = localStorage.getItem('signedInuser')
         const userToken = JSON.parse(signedInUser)
         const { token } = userToken
-        const response = await fetch('/api/v1/mylibrary/books/postbook',{
+        const response = await fetch('https://bookshareserver.herokuapp.com/api/v1/mylibrary/books/postbook',{
             method: "POST",
             headers : {
                 Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ export const deleteMyBook = createAsyncThunk(
         const signedInUser = localStorage.getItem('signedInuser')
         const userToken = JSON.parse(signedInUser)
         const { token } = userToken
-        const response = await fetch('/api/v1/mylibrary/books/deletebook/'+payload,{
+        const response = await fetch('https://bookshareserver.herokuapp.com/api/v1/mylibrary/books/deletebook/'+payload,{
             method: "DELETE",
             headers : {
                 Authorization: `Bearer ${token}`

@@ -39,7 +39,7 @@ const Register = () => {
         setError(false)
       },3500)
     }else{
-      const response = await fetch('/api/v1/mylibrary/auth/signup', {
+      const response = await fetch('https://bookshareserver.herokuapp.com/api/v1/mylibrary/auth/signup', {
       method: 'POST',
       body: JSON.stringify(userRegisterInfo),
       headers: {

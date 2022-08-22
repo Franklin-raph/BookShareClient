@@ -37,7 +37,7 @@ const BookDetailsPage = () => {
     console.log(userBookComments)
 
     const fetchBookDetail = async () => {
-        const response = await fetch(`/api/v1/mylibrary/books/${bookId}`, {
+        const response = await fetch(`https://bookshareserver.herokuapp.com/api/v1/mylibrary/books/${bookId}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${user.value.token}`

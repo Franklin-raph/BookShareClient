@@ -16,7 +16,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault()
     const userLoginInfo = {email, password}
-    const response = await fetch('/api/v1/mylibrary/auth/signin', {
+    const response = await fetch('https://bookshareserver.herokuapp.com/api/v1/mylibrary/auth/signin', {
     method: 'POST',
     body: JSON.stringify(userLoginInfo),
     headers: {
